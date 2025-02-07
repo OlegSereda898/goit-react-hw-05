@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, 200px);
+  gap: 16px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.castList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+.castItem {
+  width: 150px;
+  text-align: center;
+}
+
+.actorImage {
+  width: 150px;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.actorInfo {
+  margin-top: 8px;
+}
+
+.actorName {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.actorCharacter {
+  font-size: 14px;
+  color: gray;
+}
