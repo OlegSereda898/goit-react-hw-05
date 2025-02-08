@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { useSearchParams, Link } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import axios from "axios";
 import SearchForm from "../../components/SearchForm/SearchForm";
+import MovieList from "../../components/MovieList/MovieList";
 import css from "./MoviesPage.module.css";
 
 const API_URL = "https://api.themoviedb.org/3/search/movie";
@@ -26,16 +27,7 @@ const MoviesPage = () => {
   return (
     <div className={css.container}>
       <SearchForm onSubmit={(value) => setSearchParams({ query: value })} />
-
-      {movies.length > 0 && (
-        <ul>
-          {movies.map((movie) => (
-            <li key={movie.id}>
-              <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
-            </li>
-          ))}
-        </ul>
-      )}
+      {movies.length > 0 && <MovieList movies={movies} />}
     </div>
   );
 };
