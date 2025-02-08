@@ -66,10 +66,10 @@ const MovieDetailsPage = () => {
 
       <nav className={css.nav}>
         <h3 className={css.text}>Additional information</h3>
-        <Link to="cast" className={css.link}>
+        <Link to="cast" state={{ from: location }} className={css.link}>
           Cast
         </Link>
-        <Link to="reviews" className={css.link}>
+        <Link to="reviews" state={{ from: location }} className={css.link}>
           Reviews
         </Link>
       </nav>
